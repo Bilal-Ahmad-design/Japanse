@@ -1,0 +1,223 @@
+/* =============================================================
+   layout.css — Header, Footer, shared layout structures
+   Coral Resort Management
+   ============================================================= */
+
+/* ── SITE HEADER ─────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  background-color: var(--clr-bg);
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: var(--clr-text);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+  padding: var(--sp-24) var(--content-px);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* Header logo — 147 × 49 px (Figma) */
+.site-header .logo img {
+  height: 49px;
+  width: 147px;
+}
+
+/* Desktop nav */
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-40);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-20);
+}
+
+.nav-links a {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  white-space: nowrap;
+  position: relative;
+  transition: opacity var(--tr-fast);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--clr-text);
+  transition: width var(--tr-fast);
+}
+.nav-links a:hover { opacity: 0.6; }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a[aria-current="page"]::after { width: 100%; }
+
+/* Hamburger — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  width: 32px;
+}
+.nav-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--clr-text);
+  transition: transform var(--tr-fast), opacity var(--tr-fast);
+}
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none;           /* flex when open */
+  flex-direction: column;
+  gap: var(--sp-20);
+  position: absolute;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  background: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border-light);
+  padding: var(--sp-24) var(--content-px);
+  z-index: 199;
+  /* slide-in */
+  animation: slideDown var(--tr-fast) ease forwards;
+}
+.mobile-nav a {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-light);
+  color: var(--clr-text);
+  transition: opacity var(--tr-fast);
+}
+.mobile-nav a:hover { opacity: 0.6; }
+.mobile-nav .btn-pill {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hamburger open state */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* ── SITE FOOTER ─────────────────────────────────────────── */
+.site-footer {
+  width: 100%;
+  background-color: var(--clr-bg);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-94);
+  padding: var(--sp-24) var(--content-px);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* Row 1: logo + scroll-up */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Footer logo — 272 × 91 px (Figma) */
+.footer-top .logo img {
+  height: 91px;
+  width: 272px;
+}
+
+/* Row 2: nav group + privacy */
+.footer-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+  max-width: 800px;
+}
+.footer-nav-label {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-10);
+  color: var(--clr-text);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-20);
+}
+.footer-links a {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  white-space: nowrap;
+  transition: opacity var(--tr-fast);
+}
+.footer-links a:hover { opacity: 0.55; }
+
+.footer-privacy {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  text-decoration: underline;
+  transition: opacity var(--tr-fast);
+}
+.footer-privacy:hover { opacity: 0.55; }
+
+/* Row 3: contact btn + copyright */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copyright {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-16);
+  color: var(--clr-text);
+  white-space: nowrap;
+}

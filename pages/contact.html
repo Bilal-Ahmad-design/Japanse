@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | コーラルリゾート管理</title>
+  <meta name="description" content="コーラルリゾート管理へのお問い合わせはこちらから。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;600&family=Noto+Serif+JP:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+  <!-- Header/Footer injected by layout.js -->
+
+  <div class="inner-hero reveal">
+    <p class="inner-hero__label">お問い合わせ</p>
+    <h1 class="inner-hero__title">お問い合わせ</h1>
+  </div>
+
+  <div class="contact-page">
+
+    <!-- Left: contact info -->
+    <div class="contact-page__info reveal">
+
+      <div class="contact-page__info-block">
+        <p class="contact-page__info-label">メールアドレス</p>
+        <p class="contact-page__info-value">info@coralresort.jp</p>
+      </div>
+
+      <div class="contact-page__info-block">
+        <p class="contact-page__info-label">電話番号</p>
+        <p class="contact-page__info-value">+81 (0) 98-000-0000</p>
+      </div>
+
+      <div class="contact-page__info-block">
+        <p class="contact-page__info-label">所在地</p>
+        <p class="contact-page__info-value">沖縄県那覇市〇〇町 1-2-3</p>
+      </div>
+
+      <div class="contact-page__info-block">
+        <p class="contact-page__info-label">営業時間</p>
+        <p class="contact-page__info-value">月曜日〜金曜日 9:00〜18:00</p>
+      </div>
+
+    </div>
+
+    <!-- Right: contact form -->
+    <form class="contact__form js-contact-form reveal reveal-delay-1" novalidate aria-label="お問い合わせフォーム">
+
+      <div class="form-fields">
+
+        <div class="form-field form-field--full">
+          <label for="c-name">お名前</label>
+          <input type="text" id="c-name" name="name" autocomplete="name" required />
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="c-email">メールアドレス</label>
+          <input type="email" id="c-email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="c-email-confirm">メールアドレス確認</label>
+          <input type="email" id="c-email-confirm" name="email-confirm" autocomplete="email" required />
+        </div>
+
+        <div class="form-field form-field--full form-field--message">
+          <label for="c-msg">お問い合わせ内容</label>
+          <textarea id="c-msg" name="message" rows="4" required></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-pill">送信</button>
+
+    </form>
+
+  </div>
+
+  <script src="../js/layout.js"></script>
+</body>
+</html>

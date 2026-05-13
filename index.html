@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コーラルリゾート管理 | Coral Resort Management</title>
+  <meta name="description" content="海辺の快適さと時を超えたおもてなしが出会う場所。" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;600&family=Noto+Serif+JP:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Header + Footer injected by layout.js -->
+
+  <!-- =====================================================
+       HERO SECTION
+  ===================================================== -->
+  <section class="hero" aria-label="ヒーローセクション">
+
+    <!-- Heading + subtext + coral illustration -->
+    <div class="hero__body">
+
+      <div class="hero__copy reveal">
+        <h1 class="hero__heading">海辺の快適さと時を超えたおもてなしが出会う場所。</h1>
+        <p class="hero__sub">
+          クリアウォータービーチの中心で静かな滞在を体験してください。ウォーターフロントのリラクゼーション、心を込めて設計された宿泊施設、そしてクラシックなフロリダリゾートの魅力が融合しています。
+        </p>
+      </div>
+
+      <div class="hero__illustration reveal reveal-delay-1" aria-hidden="true">
+        <!--
+          ASSET: assets/images/hero-coral.png
+          Figma: coral/tree illustration, mask-image shape
+          Size: 372 × 390 px
+        -->
+        <img
+          class="hero__coral"
+          src="assets/images/hero-coral.png"
+          alt="Coral tree illustration"
+          width="372"
+          height="390"
+        />
+      </div>
+
+    </div>
+
+    <!-- Wide image band with decorative text -->
+    <div class="hero__band" aria-hidden="true">
+      <div class="hero__band-img">
+        <!--
+          ASSET: assets/images/hero-band.jpg
+          Figma: full-width cityscape / building image
+          Size: 1320 × 331 px
+        -->
+        <img
+          src="assets/images/hero-band.jpg"
+          alt=""
+          width="1320"
+          height="331"
+          loading="lazy"
+        />
+      </div>
+      <!-- Decorative outlined Chinese text floating above image -->
+      <p class="hero__band-label">為難忘的海岸住宿而設計。</p>
+    </div>
+
+  </section>
+  <!-- /hero -->
+
+
+  <!-- =====================================================
+       ABOUT SECTION
+  ===================================================== -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+
+    <!-- Left column -->
+    <div class="about__left reveal">
+      <div class="about__content">
+        <div class="section-title-row">
+          <h2 class="section-title" id="about-heading">關於我們</h2>
+        </div>
+        <p class="about__body">
+          正如種子最終會長成樹木和花朵，有時還會結果，我們公司的主題是「以靈活性為基礎多元化與擴展」。我們致力於在當今快速變化的世界中創造新穎、有趣、美好、愉快的事物。我們珍惜堅定不移的核心價值，並將以靈活性成長與演變，成為樹木、花朵或果實。
+        </p>
+      </div>
+      <a href="pages/about.html" class="text-link">
+        閱讀更多
+        <span class="icon" aria-hidden="true">
+          <!--
+            ASSET: assets/icons/arrow-right.svg
+            Figma: arrow-right icon, 24 × 24 px
+          -->
+          <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24" />
+        </span>
+      </a>
+    </div>
+
+    <!-- Right image stack -->
+    <div class="about__image-wrap reveal reveal-delay-2" aria-hidden="true">
+      <div class="about__image">
+        <!--
+          ASSET: assets/images/about-room.jpg
+          Figma: hotel room interior, dark overlay applied
+          Size: 492 × 337 px
+        -->
+        <img
+          src="assets/images/about-room.png"
+          alt="Resort interior"
+          width="492"
+          height="337"
+          loading="lazy"
+        />
+        <div class="about__image-overlay"></div>
+      </div>
+      <!-- Offset blurred decorative panel (Figma: left 97 top 120) -->
+      <div class="about__blur-panel" aria-hidden="true"></div>
+    </div>
+
+  </section>
+  <!-- /about -->
+
+
+  <!-- =====================================================
+       SERVICES SECTION
+  ===================================================== -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+
+    <div class="section-title-row reveal">
+      <h2 class="section-title" id="services-heading">サービス</h2>
+    </div>
+
+    <div class="services__cards">
+
+      <!-- Service card 1 -->
+      <article class="service-card reveal">
+        <div class="service-card__text">
+          <h3 class="service-card__title">宿泊施設管理</h3>
+          <p class="service-card__desc">
+            思慮深い物件管理とゲスト重視の運営を通じて、シームレスなホスピタリティ体験を創造します。
+          </p>
+        </div>
+        <div class="service-card__image">
+          <!--
+            ASSET: assets/images/service-accommodation.jpg
+            Figma: Frame 13 — poolside resort image
+            Size: 385 × 277 px
+          -->
+          <img
+            src="assets/images/service-accommodation.jpg"
+            alt="宿泊施設管理"
+            width="385"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+      </article>
+
+      <!-- Service card 2 -->
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-card__text">
+          <h3 class="service-card__title">ハウスキーピングサービス</h3>
+          <p class="service-card__desc">
+            快適さ、清潔さ、そして長く続く第一印象を維持するために洗練された清掃サービスを提供します。
+          </p>
+        </div>
+        <div class="service-card__image">
+          <!--
+            ASSET: assets/images/service-housekeeping.jpg
+            Figma: Frame 14 — bedroom/interior cleaning image
+            Size: 385 × 277 px
+          -->
+          <img
+            src="assets/images/service-housekeeping.jpg"
+            alt="ハウスキーピングサービス"
+            width="385"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+      </article>
+
+      <!-- Service card 3 -->
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-card__text">
+          <h3 class="service-card__title">物件改装</h3>
+          <p class="service-card__desc">
+            既存の空間を時代を超えた価値と海岸の特色を持つ現代的なホスピタリティ環境に変えます。
+          </p>
+        </div>
+        <div class="service-card__image">
+          <!--
+            ASSET: assets/images/service-renovation.jpg
+            Figma: Frame 15 — staircase/renovation image
+            Size: 385 × 277 px
+          -->
+          <img
+            src="assets/images/service-renovation.jpg"
+            alt="物件改装"
+            width="385"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cta-right">
+      <a href="pages/services.html" class="text-link">
+        すべてのサービスを見る
+        <span class="icon" aria-hidden="true">
+          <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24" />
+        </span>
+      </a>
+    </div>
+
+  </section>
+  <!-- /services -->
+
+
+  <!-- =====================================================
+       FULL-WIDTH DIVIDER IMAGE
+  ===================================================== -->
+  <!--
+    ASSET: assets/images/divider-dining.jpg
+    Figma: Image node 64:99 — restaurant/dining room, full bleed
+    Size: 1440 × 400 px
+  -->
+  <div class="img-divider" aria-hidden="true">
+    <img
+      src="assets/images/divider-dining.jpg"
+      alt=""
+      width="1440"
+      height="400"
+      loading="lazy"
+    />
+  </div>
+
+
+  <!-- =====================================================
+       WORK SECTION
+  ===================================================== -->
+  <section class="work" id="work" aria-labelledby="work-heading">
+
+    <!-- Decorative background text (behind everything) - duplicated for seamless scroll -->
+    <p class="work__bg-text" aria-hidden="true">選ばれたホスピタリティ＆海岸プロジェクト　　選ばれたホスピタリティ＆海岸プロジェクト</p>
+
+    <div class="work__header reveal">
+      <div class="section-title-row">
+        <h2 class="section-title" id="work-heading">仕事</h2>
+      </div>
+    </div>
+
+    <!-- Row 1 — right-aligned (Figma: cards start at x:216 out of 1200 content width) -->
+    <div class="work__grid work__grid--right">
+
+      <article class="work-card reveal">
+        <div class="work-card__image">
+          <!--
+            ASSET: assets/images/work-jacuzzi-terrace.jpg
+            Figma: Image 4 — outdoor jacuzzi terrace, Okinawa
+            Size: 480 × 277 px
+          -->
+          <img
+            src="assets/images/work-jacuzzi-terrace.jpg"
+            alt="ジャグジーテラス沖縄IMS"
+            width="480"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+        <h3 class="work-card__title">ジャグジーテラス沖縄IMS</h3>
+      </article>
+
+      <article class="work-card reveal reveal-delay-1">
+        <div class="work-card__image">
+          <!--
+            ASSET: assets/images/work-pool-villa.jpg
+            Figma: Image 5 — pool villa aerial view
+            Size: 480 × 277 px
+          -->
+          <img
+            src="assets/images/work-pool-villa.jpg"
+            alt="プールヴィラ天羽"
+            width="480"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+        <h3 class="work-card__title">プールヴィラ天羽</h3>
+      </article>
+
+    </div>
+
+    <!-- Row 2 — left-aligned -->
+    <div class="work__grid">
+
+      <article class="work-card reveal">
+        <div class="work-card__image">
+          <!--
+            ASSET: assets/images/work-royal-view.jpg
+            Figma: Image 6 — hotel pool/ocean view
+            Size: 480 × 277 px
+          -->
+          <img
+            src="assets/images/work-royal-view.jpg"
+            alt="ロイヤルビュー ホテル美ら海"
+            width="480"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+        <h3 class="work-card__title">ロイヤルビュー ホテル美ら海</h3>
+      </article>
+
+      <article class="work-card reveal reveal-delay-1">
+        <div class="work-card__image">
+          <!--
+            ASSET: assets/images/work-lietta.jpg
+            Figma: Image 7 — modern hotel building exterior
+            Size: 480 × 277 px
+          -->
+          <img
+            src="assets/images/work-lietta.jpg"
+            alt="リエッタ中山"
+            width="480"
+            height="277"
+            loading="lazy"
+          />
+        </div>
+        <h3 class="work-card__title">リエッタ中山</h3>
+      </article>
+
+    </div>
+
+    <div class="cta-right">
+      <a href="pages/work.html" class="text-link">
+        すべての仕事を見る
+        <span class="icon" aria-hidden="true">
+          <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24" />
+        </span>
+      </a>
+    </div>
+
+  </section>
+  <!-- /work -->
+
+
+  <!-- =====================================================
+       COMPANY SECTION
+  ===================================================== -->
+  <section class="business-philosophy reveal" id="company">
+    <div class="business-philosophy__inner">
+
+      <div class="business-philosophy__heading">
+        <div class="section-title-row">
+          <h2 class="section-title">企業理念</h2>
+        </div>
+      </div>
+
+      <div class="business-philosophy__body">
+        <blockquote class="business-philosophy__quote">
+          種はいずれ芽吹き、樹木や花となり、やがて実を結ぶように——私たちのテーマは「柔軟性を基盤とした多様化と拡張」です。目まぐるしく変化する現代において、新しく、楽しく、美しく、喜ばれるものを生み出し続けます。揺るぎない核心的な価値観を大切にしながら、樹木となり、花となり、実となるべく柔軟に成長・進化してまいります。
+        </blockquote>
+        <div class="business-philosophy__rep">
+          <p class="business-philosophy__rep-label">代表取締役</p>
+          <p class="business-philosophy__rep-name">宮里 聡</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /company -->
+
+
+  <!-- =====================================================
+       CONTACT SECTION
+  ===================================================== -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+
+    <div class="contact__header reveal">
+      <div class="section-title-row section-title-row--center">
+        <h2 class="section-title" id="contact-heading">お問い合わせ</h2>
+      </div>
+    </div>
+
+    <form class="contact__form js-contact-form" novalidate aria-label="お問い合わせフォーム">
+
+      <div class="form-fields">
+
+        <!-- Name -->
+        <div class="form-field form-field--full">
+          <label for="home-name">お名前</label>
+          <input type="text" id="home-name" name="name" autocomplete="name" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-field form-field--full">
+          <label for="home-email">メールアドレス</label>
+          <input type="email" id="home-email" name="email" autocomplete="email" required />
+        </div>
+
+        <!-- Email Confirm -->
+        <div class="form-field form-field--full">
+          <label for="home-email-confirm">メールアドレス確認</label>
+          <input type="email" id="home-email-confirm" name="email-confirm" autocomplete="email" required />
+        </div>
+
+        <!-- Message -->
+        <div class="form-field form-field--full form-field--message">
+          <label for="home-msg">お問い合わせ内容</label>
+          <textarea id="home-msg" name="message" rows="4" required></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-pill">送信</button>
+
+    </form>
+
+  </section>
+  <!-- /contact -->
+
+
+  <!-- JS -->
+  <script src="js/layout.js"></script>
+
+</body>
+</html>

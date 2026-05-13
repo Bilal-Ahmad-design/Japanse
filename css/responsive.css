@@ -1,0 +1,228 @@
+/* =============================================================
+   responsive.css — Breakpoint overrides
+   Desktop  > 1200px  (base in other files)
+   Laptop   ≤ 1200px
+   Tablet   ≤ 900px
+   Mobile   ≤ 600px
+   Coral Resort Management
+   ============================================================= */
+
+
+/* ─────────────────────────────────────────────────────────────
+   LAPTOP  ≤ 1200px
+───────────────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+
+  :root {
+    --section-px: 80px;
+    --content-px: 48px;
+    --sp-120: 80px;
+    --sp-94:  56px;
+    --fs-74:  54px;
+    --fs-44:  38px;
+  }
+
+  /* Hero */
+  .hero { padding-top: var(--sp-94); }
+  .hero__band { width: calc(100% - 96px); }
+  .hero__band-label { font-size: 50px; }
+  .hero__heading { font-size: 38px; }
+
+  /* About */
+  .about__left { flex: 0 0 420px; max-width: 420px; }
+  .about__image-wrap { width: 380px; height: 380px; }
+  .about__image { width: 380px; }
+  .about__blur-panel { width: 380px; }
+
+  /* Services */
+  .service-card__image { width: 300px; height: 220px; }
+
+  /* Work */
+  .work-card { width: 380px; }
+
+  /* News */
+  .news__content-col { width: 480px; }
+
+  /* Inner pages */
+  .inner-hero__title { font-size: 50px; }
+  .about-page__values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   TABLET  ≤ 900px
+───────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+
+  :root {
+    --section-px: 40px;
+    --content-px: 32px;
+    --sp-120: 64px;
+    --sp-94:  40px;
+    --sp-80:  48px;
+    --sp-64:  40px;
+    --sp-44:  28px;
+    --fs-74:  40px;
+    --fs-44:  30px;
+    --fs-24:  20px;
+  }
+
+  /* Header */
+  .site-header__inner { height: auto; min-height: 72px; padding: 16px 32px; }
+  .site-header__nav { display: none; }
+  .nav-toggle { display: flex; }
+  .mobile-nav { display: none; } /* toggled via JS */
+
+  /* Header sticky offset fix */
+  :root { --header-h: 72px; }
+  .mobile-nav { top: 72px; }
+
+  /* Hero */
+  .hero { gap: 48px; padding-top: 40px; }
+  .hero__body { gap: 40px; }
+  .hero__copy { padding: 0 32px; }
+  .hero__heading { font-size: 28px; max-width: 100%; }
+  .hero__sub { max-width: 100%; }
+  .hero__illustration { padding: 0 32px; }
+  .hero__coral { width: 260px; height: 273px; }
+  .hero__band { width: 100%; height: auto; }
+  .hero__band-img { position: relative; top: auto; height: 220px; }
+  .hero__band-label { font-size: 30px; }
+
+  /* About */
+  .about { flex-direction: column; padding: 64px 40px; gap: 44px; }
+  .about__left { flex: none; max-width: 100%; width: 100%; }
+  .about__image-wrap { width: 100%; height: 280px; }
+  .about__image { width: 100%; height: 280px; position: relative; top: auto; left: auto; }
+  .about__blur-panel { display: none; }
+
+  /* Services */
+  .services { padding: 64px 40px; }
+  .service-card { flex-direction: column; align-items: flex-start; }
+  .service-card__image { width: 100%; height: 220px; order: -1; }
+
+  /* Work */
+  .work { padding: 64px 40px; }
+  .work__bg-text { display: none; }
+  .work__grid, .work__grid--right { flex-direction: column; justify-content: flex-start; }
+  .work-card { width: 100%; }
+
+  /* Company */
+  .business-philosophy { padding: 64px 40px; }
+  .business-philosophy__inner { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Contact */
+  .contact { padding: 64px 40px; gap: 64px; }
+  .contact__header { width: 100%; }
+  .contact__form { width: 100%; }
+  .form-row, .form-field--full { width: 100%; }
+  .form-field--message { padding-bottom: 80px; }
+
+  /* Inner pages */
+  .inner-hero { padding: 64px 40px 48px; }
+  .inner-hero__title { font-size: 38px; }
+  .about-page__intro { grid-template-columns: 1fr; padding: 64px 40px; }
+  .about-page__intro-img { height: 300px; }
+  .about-page__values { padding: 64px 40px; }
+  .about-page__values-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
+  .services-page__list { padding: 64px 40px; }
+  .business-page__list { padding: 64px 40px; }
+  .business-philosophy { padding: 64px 40px; }
+  .business-philosophy__inner { grid-template-columns: 1fr; gap: 40px; }
+  .business-profile { padding: 64px 40px; }
+  .business-profile__row { grid-template-columns: 140px 1fr; gap: 24px; }
+  .work-page__grid { grid-template-columns: 1fr; padding: 64px 40px; }
+  .news-page__list { padding: 64px 40px; max-width: 100%; }
+  .contact-page { grid-template-columns: 1fr; padding: 64px 40px; }
+
+  /* Footer */
+  .site-footer__inner { gap: 48px; }
+  .footer-nav-row { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-copyright { font-size: 14px; white-space: normal; }
+  .footer-top .logo img { height: 60px; width: auto; }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE  ≤ 600px
+───────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+
+  :root {
+    --section-px: 20px;
+    --content-px: 20px;
+    --sp-120: 48px;
+    --sp-94:  32px;
+    --sp-80:  36px;
+    --sp-64:  32px;
+    --sp-44:  24px;
+    --sp-24:  16px;
+    --fs-74:  28px;
+    --fs-44:  24px;
+    --fs-24:  18px;
+    --fs-16:  15px;
+    --fs-14:  13px;
+  }
+
+  /* Header */
+  .site-header__inner { padding: 14px 20px; }
+  .site-header .logo img { height: 36px; width: auto; }
+  .mobile-nav { padding: 20px; }
+
+  /* Hero */
+  .hero__copy { padding: 0 20px; }
+  .hero__heading { font-size: 22px; line-height: 1.5; }
+  .hero__illustration { padding: 0 20px; }
+  .hero__coral { width: 200px; height: 210px; }
+  .hero__band-img { height: 180px; }
+  .hero__band-label { font-size: 18px; white-space: normal; text-align: center; }
+
+  /* Services */
+  .services { padding: 48px 20px; }
+  .service-card__image { height: 180px; }
+
+  /* Work */
+  .work { padding: 48px 20px; }
+  .work-card__image { height: 200px; }
+
+  /* Contact */
+  .contact { padding: 48px 20px; }
+  .form-row { flex-direction: column; gap: var(--sp-24); }
+  .form-field--message { padding-bottom: 60px; }
+
+  /* Footer */
+  .site-footer__inner { padding: 20px; gap: 40px; }
+  .footer-top .logo img { height: 44px; width: auto; }
+  .footer-links { flex-wrap: wrap; gap: 10px 16px; }
+
+  /* Inner pages */
+  .inner-hero { padding: 48px 20px 32px; }
+  .inner-hero__title { font-size: 28px; }
+  .about-page__intro { padding: 48px 20px; }
+  .about-page__values { padding: 48px 20px; }
+  .services-page__list { padding: 48px 20px; }
+  .business-page__list { padding: 48px 20px; }
+  .business-philosophy { padding: 48px 20px; }
+  .business-philosophy__quote { padding-left: 20px; }
+  .business-profile { padding: 48px 20px; }
+  .business-profile__row { grid-template-columns: 1fr; gap: 8px; }
+  .work-page__grid { padding: 48px 20px; }
+  .news-page__list { padding: 48px 20px; }
+  .contact-page { padding: 48px 20px; }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   HOVER: disable image zoom on touch devices
+───────────────────────────────────────────────────────────── */
+@media (hover: none) {
+  .about__image:hover img,
+  .service-card:hover .service-card__image img,
+  .work-card:hover .work-card__image img,
+  .work-page__card:hover .work-page__img img { transform: none; }
+
+  .btn-pill:hover { background: none; color: var(--clr-text); }
+  .btn-circle:hover { background: none; }
+  .btn-circle:hover img { filter: none; }
+}

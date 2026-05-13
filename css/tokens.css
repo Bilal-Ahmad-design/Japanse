@@ -1,0 +1,58 @@
+/* =============================================================
+   tokens.css — Design tokens extracted from Figma
+   Coral Resort Management
+   ============================================================= */
+
+:root {
+  /* ── Colors ── */
+  --clr-bg:             #e3e3e3;
+  --clr-text:           #24252c;
+  --clr-border:         rgba(36, 37, 44, 0.40);
+  --clr-border-light:   rgba(36, 37, 44, 0.20);
+  --clr-overlay-dark:   rgba(0, 0, 0, 0.20);
+  --clr-blur-panel:     rgba(36, 37, 44, 0.10);
+  --clr-white:          #ffffff;
+
+  /* ── Typography — font families ── */
+  --ff-serif:  'Noto Serif JP', 'Georgia', serif;
+  --ff-sans:   'Noto Sans JP', 'Inter', sans-serif;
+
+  /* ── Font weights ── */
+  --fw-extralight: 200;
+  --fw-light:      300;
+  --fw-regular:    400;
+  --fw-semibold:   600;
+
+  /* ── Font sizes (Figma exact) ── */
+  --fs-10:  10px;
+  --fs-14:  14px;
+  --fs-16:  16px;
+  --fs-24:  24px;
+  --fs-44:  44px;
+  --fs-74:  74px;
+
+  /* ── Spacing (Figma exact) ── */
+  --sp-6:   6px;
+  --sp-12:  12px;
+  --sp-20:  20px;
+  --sp-24:  24px;
+  --sp-40:  40px;
+  --sp-44:  44px;
+  --sp-60:  60px;
+  --sp-64:  64px;
+  --sp-74:  74px;
+  --sp-80:  80px;
+  --sp-94:  94px;
+  --sp-120: 120px;
+
+  /* ── Layout ── */
+  --max-w:      1440px;
+  --header-h:   111px;
+  --content-px: 60px;   /* horizontal page padding */
+  --section-px: 120px;  /* section padding */
+
+  /* ── Transitions ── */
+  --tr-fast: 0.22s ease;
+  --tr-base: 0.35s ease;
+  --tr-slow: 0.55s ease;
+}

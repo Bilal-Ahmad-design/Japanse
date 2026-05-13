@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__1af8a5d1-daec-4eda-a1fd-8123b1806364__get_metadata",
+      "mcp__1af8a5d1-daec-4eda-a1fd-8123b1806364__get_design_context",
+      "mcp__1af8a5d1-daec-4eda-a1fd-8123b1806364__get_screenshot",
+      "Bash(curl -s -o \"D:/Projects/Japanse/figma-work.png\" \"https://www.figma.com/api/mcp/asset/f3880d19-e816-4367-b678-d98885f98422\")",
+      "Bash(curl -s -o \"D:/Projects/Japanse/figma-about-img.png\" \"https://www.figma.com/api/mcp/asset/f53e353b-511b-4c9b-9ab3-36b1f53e1110\")",
+      "Bash(curl -s -o \"D:/Projects/Japanse/figma-header.png\" \"https://www.figma.com/api/mcp/asset/b2ec4ffe-d981-4fdc-a057-0643853c4426\")",
+      "Bash(del \"D:\\\\Projects\\\\Japanse\\\\figma-work.png\" \"D:\\\\Projects\\\\Japanse\\\\figma-about-img.png\" \"D:\\\\Projects\\\\Japanse\\\\figma-header.png\")",
+      "WebFetch(domain:coral-resort-management.com)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: Coral Resort Management website redesign *)"
+    ]
+  }
+}

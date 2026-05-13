@@ -1,0 +1,328 @@
+/* =============================================================
+   pages.css — Styles shared across inner pages
+   (About, Services, Work, News, Contact)
+   Coral Resort Management
+   ============================================================= */
+
+/* ── INNER PAGE HERO BANNER ──────────────────────────────── */
+.inner-hero {
+  width: 100%;
+  padding: var(--sp-120) var(--section-px) var(--sp-80);
+  border-bottom: 1px solid var(--clr-border);
+}
+.inner-hero__label {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  opacity: 0.55;
+  margin-bottom: var(--sp-24);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.inner-hero__title {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-74);
+  line-height: 1.15;
+  color: var(--clr-text);
+  max-width: 900px;
+}
+
+/* ── ABOUT PAGE ──────────────────────────────────────────── */
+.about-page__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-80);
+  padding: var(--sp-120) var(--section-px);
+  align-items: start;
+}
+.about-page__intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-44);
+}
+.about-page__intro-text p {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-light);
+  line-height: 1.85;
+  color: var(--clr-text);
+}
+.about-page__intro-img {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.about-page__intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-page__values {
+  padding: var(--sp-120) var(--section-px);
+  border-top: 1px solid var(--clr-border);
+}
+.about-page__values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-44);
+  margin-top: var(--sp-64);
+}
+.value-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-20);
+  padding-top: var(--sp-24);
+  border-top: 1px solid var(--clr-border-light);
+}
+.value-card__title {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  color: var(--clr-text);
+}
+.value-card__body {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-light);
+  line-height: 1.78;
+  color: var(--clr-text);
+}
+
+/* ── SERVICES PAGE ───────────────────────────────────────── */
+.services-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+  padding: var(--sp-120) var(--section-px);
+}
+
+/* ── WORK / PORTFOLIO PAGE ───────────────────────────────── */
+.work-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-24);
+  padding: var(--sp-120) var(--section-px);
+}
+.work-page__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--tr-fast);
+}
+.work-page__card:hover {
+  opacity: 0.7;
+}
+.work-page__img {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+.work-page__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--tr-slow);
+}
+.work-page__card:hover .work-page__img img {
+  transform: scale(1.04);
+}
+.work-page__title {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  color: var(--clr-text);
+  border-top: 1px solid var(--clr-border-light);
+  padding-top: var(--sp-24);
+}
+.work-page__tag {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+}
+
+/* Work detail pages */
+.work-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-80);
+  padding: var(--sp-120) var(--section-px);
+  max-width: 860px;
+}
+.work-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+}
+.work-detail-section h2 {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  color: var(--clr-text);
+}
+.work-detail-section p {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-16);
+  color: var(--clr-text);
+  line-height: 1.78;
+}
+
+/* ── NEWS PAGE ───────────────────────────────────────────── */
+.news-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+  padding: var(--sp-120) var(--section-px);
+  max-width: 860px;
+}
+/* reuse .news-card from home.css */
+
+/* ── BUSINESS PAGE ───────────────────────────────────────── */
+.business-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+  padding: var(--sp-120) var(--section-px);
+}
+
+/* Number label above each card title */
+.business-card__number {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-extralight);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  opacity: 0.45;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--sp-6);
+  display: block;
+}
+
+/* Philosophy section */
+.business-philosophy {
+  padding: var(--sp-120) var(--section-px);
+  border-top: 1px solid var(--clr-border);
+}
+.business-philosophy__inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--sp-80);
+  align-items: start;
+}
+.business-philosophy__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-64);
+}
+.business-philosophy__quote {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-16);
+  line-height: 2.1;
+  color: var(--clr-text);
+  border-left: 2px solid var(--clr-border);
+  padding-left: var(--sp-40);
+}
+.business-philosophy__rep {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  padding-top: var(--sp-24);
+  border-top: 1px solid var(--clr-border-light);
+}
+.business-philosophy__rep-label {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+}
+.business-philosophy__rep-name {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  color: var(--clr-text);
+}
+
+/* Company profile table */
+.business-profile {
+  padding: var(--sp-120) var(--section-px);
+  border-top: 1px solid var(--clr-border);
+}
+.business-profile__heading {
+  margin-bottom: var(--sp-64);
+}
+.business-profile__table {
+  display: flex;
+  flex-direction: column;
+  max-width: 860px;
+}
+.business-profile__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--sp-44);
+  padding: var(--sp-24) 0;
+  border-bottom: 1px solid var(--clr-border-light);
+  align-items: baseline;
+}
+.business-profile__row dt {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-14);
+  color: var(--clr-text);
+  opacity: 0.55;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.business-profile__row dd {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-16);
+  color: var(--clr-text);
+  line-height: 1.75;
+}
+
+/* ── CONTACT PAGE ────────────────────────────────────────── */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-80);
+  padding: var(--sp-120) var(--section-px);
+  align-items: start;
+}
+.contact-page__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-44);
+}
+.contact-page__info-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+  padding-bottom: var(--sp-24);
+  border-bottom: 1px solid var(--clr-border-light);
+}
+.contact-page__info-label {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-light);
+  color: var(--clr-text);
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.contact-page__info-value {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  color: var(--clr-text);
+}
+.contact-page__form {
+  /* reuse .contact__form from home.css */
+}
